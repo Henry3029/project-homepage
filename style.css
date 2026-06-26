@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #ffffff;
+  color: #1e293b;
+  line-height: 1.5;
+  overflow-x: hidden; /* Prevents unwanted horizontal screen wobbling on mobile */
+}
+
+/* Apply elegant Playfair Display to your headings */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Apply clean Roboto to your body text and paragraphs */
+body, p, a {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Base Headings styling */
+h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #0f172a;
+}
+
+/* ==========================================================================
+   2. MOBILE BASE STYLES (Viewport: 320px and up)
+   ========================================================================== */
+
+/* --- HEADER CONTAINER WITH DIAGONAL SLANT --- */
+.hero-header {
+  width: 100%;
+  min-height: 260px;
+  background-color: #0099b8; /* Rich Teal/Blue from screenshot */
+  /* Cuts the bottom right edge upwards to make the perfect diagonal split */
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative;
+  padding: 2rem 1rem;
+}
+
+.header-title {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 300;
+  text-align: right;
+  margin-top: 1rem;
+}
+
+/* --- FLOATING PROFILE PHOTO LAYER --- */
+.image-photo {
+  position: absolute;
+  top: 20px;
+  left: 1rem;
+  width: 140px;
+  height: 160px;
+  background-color: #e2e8f0;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.image-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- MAIN CONTAINER CONSTRAINT --- */
+main {
+  width: 100%;
+  padding: 0 1rem;
+  margin-top: 2rem;
+}
+
+/* --- SECTION 1: ABOUT ME WHITE CARD --- */
+.about-me {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.about-me p {
+  color: #475569;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* About Me Social Links Alignment */
+.card-socials {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.card-socials i {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s;
+}
+
+.card-socials i:hover {
+  transform: scale(1.1);
+}
+
+.card-socials i {
+  font-size: 24px;      /* Changes the size of the icon */
+  color: #475569;       /* Gives it a sleek grey color */
+  transition: color 0.2s;
+}
+
+/* Make them turn your accent gold color when hovered over! */
+.card-socials i:hover {
+  color: #0099b8; 
+}
+
+/* --- SECTION 2: MY WORK GALLERY --- */
+.grid-cards {
+  margin-bottom: 4rem;
+}
+
+/* Card Container layout on mobile: 1 column stack */
+.grid-cards .card-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+}
+
+/* Colored placeholder blocks matching screenshot colors */
+.card-image-box {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Color classes for individual card blocks */
+.color-red    { background-color: #991b1b; }
+.color-blue   { background-color: #5b21b6; }
+.color-purple { background-color: #a21caf; }
+.color-orange { background-color: #c2410c; }
+.color-green  { background-color: #065f46; }
+.color-pink   { background-color: #be185d; }
+
+.card-info {
+  padding: 1rem;
+}
+
+.card-header-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-header-line h3 {
+  font-size: 1.1rem;
+  color: #0f172a;
+}
+
+.card-info .icons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.card-info .icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.card-info p {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* --- SECTION 3: CONTACT ME --- */
+.contact-me {
+  position: relative; /* Acts as the absolute boundary anchor */
+  padding: 3rem 1rem 6rem 1rem; /* Big bottom padding to prevent links crashing into text */
+  text-align: center;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.contact-me p {
+  color: #475569;
+  margin-bottom: 0.5rem;
+}
+
+/* Locked right at the absolute bottom center of the contact box */
+.contact-me .links {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%); /* Locks it perfectly dead-center horizontal axis */
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contact-me .links img {
+  width: 28px;
+  height: 28px;
+}
+
+/* --- FOOTER GRAPHIC LAYER --- */
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.footer img {
+  max-width: 100px;
+  opacity: 0.5;
+}
+
+
+/* ==========================================================================
+   3. MEDIA QUERIES (Layering responsiveness as screen width grows)
+   ========================================================================== */
+
+/* 💻 TABLET / LARGE PHONE BREAKPOINT (768px and up) */
+@media (min-width: 768px) {
+  /* Give components structured breathing padding on wider screens */
+  main {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .hero-header {
+    min-height: 320px;
+    padding: 3rem 4rem;
+  }
+
+  .header-title {
+    font-size: 3.5rem;
+  }
+
+  .image-photo {
+    width: 200px;
+    height: 240px;
+    top: 40px;
+    left: 4rem;
+  }
+
+  /* The About me section grid alignment tweak */
+  .about-me {
+    margin-top: -40px; /* Pulls card up to cross directly over the slant line */
+    padding: 2.5rem;
+    margin-left: 240px; /* Pushes text right so it never sits behind the absolute photo */
+  }
+
+  /* Switch project gallery from 1 column into a 2-Column row structure */
+  .grid-cards .card-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* 🖥️ DESKTOP MONITORS / ULTRA-WIDE WORKSTATIONS (1200px up to 1920px) */
+@media (min-width: 1200px) {
+  main {
+    max-width: 1140px; /* Caps content stretch width so text remains comfortable to read */
+  }
+
+  /* Switch project gallery from 2 columns into 3 columns side-by-side */
+  .grid-cards .card-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .hero-header {
+    min-height: 380px;
+  }
+
+  .image-photo {
+    left: 10%; /* Positions photo elements contextually dynamically on wider screens */
+  }
+
+  .about-me {
+    margin-left: 320px;
+  }
+}
