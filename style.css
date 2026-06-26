@@ -4,21 +4,22 @@
   box-sizing: border-box;
 }
 
+/* 1. Base Setup: Apply Roboto as the default font globally across the entire page layout */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background-color: #ffffff;
   color: #1e293b;
   line-height: 1.5;
-  overflow-x: hidden; /* Prevents unwanted horizontal screen wobbling on mobile */
+  overflow-x: hidden; 
 }
 
-/* Apply elegant Playfair Display to your headings */
+/* 2. Heading Setup: Override the body font specifically for your structural titles */
 h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', Georgia, serif;
 }
 
-/* Apply clean Roboto to your body text and paragraphs */
-body, p, a {
+/* 3. Text Elements: Explicitly handles paragraphs and interactive link elements */
+p, a {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -235,8 +236,8 @@ main {
 }
 
 .footer img {
-  max-width: 100px;
-  opacity: 0.5;
+  max-width: 300px;
+/*  opacity: 50%;*/
 }
 
 
